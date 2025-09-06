@@ -1,0 +1,73 @@
+---
+const tel = "541144556677"
+const mail = "a@gmail.com"
+const direc = "Calle calza 1234, Buenos Aires, Argentina"
+---
+<footer class="bg-zinc-700 p-6 py-12 text-white" >
+    <div class="flex justify-evenly flex-col sm:flex-row gap-16">
+        <div>
+            <ul class="flex flex-col gap-1 sm:gap-3">
+                <li>
+                    <a href="#" class="hover:underline underline-offset-4">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#Servicios" class="hover:underline underline-offset-4">
+                        Servicios
+                    </a>
+                </li>
+                <li>
+                    <a href="#Contacto" class="hover:underline underline-offset-4">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="flex flex-col gap-1 sm:gap-3">
+                <li>
+                    <a href={`http://wa.me/${tel}`} class="hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer" >
+                        +{tel}
+                    </a>
+                </li>
+                <li>
+                    <a href={`mailto:${mail}`} class="hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">
+                        {mail}
+                    </a>
+                </li>
+                <li>
+                    <a href={`http://www.google.com/maps/search/${direc}`} class="hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">
+                        {direc}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="flex flex-col gap-1 sm:gap-3">
+                <li>
+                    <a href="#" class="hover:underline underline-offset-4">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#Servicios" class="hover:underline underline-offset-4">
+                        Servicios
+                    </a>
+                </li>
+                <li>
+                    <a href="#Contacto" class="hover:underline underline-offset-4">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr class="my-8 text-zinc-500">
+    <p class="text-center">
+        &copy; Desarrollado por Christian Fidelio (
+        <a href="https://www.linkedin.com/in/christian-fidelio/" target="_blank" rel="noopener noreferrer" class="hover:underline underline-offset-2">Linkedin</a>
+        )
+    </p>
+
+</footer>
