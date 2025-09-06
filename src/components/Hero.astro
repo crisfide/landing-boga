@@ -1,7 +1,8 @@
 ---
-
+import fondo from "../../public/img1.webp"
+console.log(fondo)
 ---
-<section class="hero h-screen w-full top-0 flex">
+<section class="hero h-screen w-full top-0 flex" style={`background-image: url(${fondo?.src});`}>
     <article class="m-auto text-white max-w-2xl px-6 text-center">
         <h1 class="text-4xl  font-bold mb-2">Asesoria Legal</h1>
         <p class="mb-8">
@@ -18,7 +19,7 @@
 
 <style>
     .hero{
-        background-image: url("./img1.webp");
+        /* background-image: url("/img1.webp"); */
         background-size: cover;
         background-position: top;
     }
