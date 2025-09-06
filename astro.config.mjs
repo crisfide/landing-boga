@@ -6,8 +6,13 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
   base: "/landing-boga/",
+  
+  server: {
+    host: '0.0.0.0',
+    port: 4321, 
+  },
 
 });
