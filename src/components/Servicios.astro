@@ -21,11 +21,11 @@ const servicios = [
 <section id="Servicios" class="w-full sm:p-16 bg-stone-100 text-center">
     <h1 class="text-4xl  font-bold mb-2">Nuestros servicios</h1>
 
-    <div class="flex flex-wrap justify-center py-2 gap-6 lg:gap-12">
+    <div class="flex flex-wrap justify-center py-2 gap-6 lg:gap-12 sm:w-[80%] mx-auto">
         {servicios.map(s=>(
             <article class="w-76 border p-2 bg-white rounded-md border-gray-200 hover:shadow-2xl">
-                <figure class="w-full mb-2">
-                    <img src={s.img} alt={s.titulo} class="w-72 h-40">
+                <figure class="w-full mb-2 overflow-hidden">
+                    <img src={s.img} alt={s.titulo} class="w-72 h-40 hover:scale-120 transition-transform duration-300" >
                 </figure>
                 <h1 class="text-xl font-bold mb-2">{s.titulo}</h1>
                 <p>{s.descripcion}</p>
