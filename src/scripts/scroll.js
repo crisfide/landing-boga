@@ -1,14 +1,33 @@
 
 document.addEventListener("DOMContentLoaded",()=>{
     document.addEventListener("scroll", animarScroll)
+    document.addEventListener("scroll", esconderMenuBurger)
     // document.addEventListener("scroll", animarScroll)
+})
+
+
+const btnBurger = document.getElementById("btnBurger")
+const menu = document.querySelector("#nav-burger ul")
+btnBurger.addEventListener("click", e => {
+    console.log("object")
+    menu.classList.toggle("h-0");
+    menu.classList.toggle("h-screen");
+})
+
+const esconderMenuBurger = e => {
+    menu.classList.add("h-0");
+    menu.classList.remove("h-screen");
+}
+document.querySelectorAll("#nav-burger ul li").forEach(li => {
+    li.addEventListener("click", esconderMenuBurger)
 })
 
 const animarScroll = e => {
     const posicion = document.documentElement.scrollTop
     const altura = document.documentElement.scrollHeight
     const porcentaje = posicion/altura
-    
+
+
     const header = document.querySelector("header")
     if (porcentaje>0.03) {
         header.classList.add("bg-[#c69842]/70", "py-0", "shadow-lg", "shadow-[#c69842]/50", "backdrop-blur-xs")
@@ -62,3 +81,5 @@ const observerLat = new IntersectionObserver(entries => {
 
 const imgs = document.querySelectorAll('.img-fadein');
 imgs.forEach(img => observerLat.observe(img));
+
+

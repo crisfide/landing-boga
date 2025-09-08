@@ -1,5 +1,10 @@
 ---
-
+const opciones = [
+    { href:"#", text:"Inicio" },
+    { href:"#Servicios", text:"Servicios" },
+    { href:"#CasosExito", text:"Casos" },
+    { href:"#Contacto", text:"Contacto" },
+]
 ---
 
 <header class="fixed w-full py-2 z-50 transition:[padding] transition:[backgrond-color] duration-500 ">
@@ -10,22 +15,36 @@
                 <span class="font-extrabold font-sans">LandingBoga</span>
             </a>
         </div>
-        <ul class="flex gap-4 text-white">
-            <li>
-                <a href="#" class="hover:underline underline-offset-8">
-                    Inicio
-                </a>
-            </li>
-            <li>
-                <a href="#Servicios" class="hover:underline underline-offset-8">
-                    Servicios
-                </a>
-            </li>
-            <li>
-                <a href="#Contacto" class="hover:underline underline-offset-8">
-                    Contacto
-                </a>
-            </li>
+        <ul class="gap-4 text-white hidden sm:flex">
+            {opciones.map(op=>(
+                <li>
+                    <a href={op.href} class="hover:underline underline-offset-8">
+                        {op.text}
+                    </a>
+                </li>
+            ))}
+        </ul>
+
+        <button class="block text-white sm:hidden " id="btnBurger">
+            <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" 
+                class="w-8 h-8  transition-opacity duration-300" 
+                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
+
+    <nav class="sm:hidden" id="nav-burger">        
+        <ul class="text-white flex flex-col justify-start items-center backdrop-blur-xs  h-0 overflow-hidden transition-all duration-1000  ">
+            <div class="py-2">
+                {opciones.map(op=>(
+                    <li>
+                        <a href={op.href} class="py-2 block text-center text-3xl font-bold">
+                            {op.text}
+                        </a>
+                    </li>
+                ))}
+            </div>
         </ul>
     </nav>
 </header>
