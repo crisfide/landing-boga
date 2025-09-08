@@ -25,9 +25,9 @@ const casos = [
         {casos.map(c=>(
             <article class="w-full relative  ">
                 <figure class="mr-4 sm:mr-2 z-0 relative sm:w-[40%]">
-                    <img src={c.img} alt={c.titulo} class="h-60 w-full object-cover rounded-lg">
+                    <img src={c.img} alt={c.titulo} class="h-60 w-full object-cover rounded-lg  img-fadein opacity-0 -translate-x-32 transition-all duration-1000">
                 </figure>
-                <div class="sm:absolute top-0 left-[40%] z-10">
+                <div class="sm:absolute top-0 left-[40%] z-10  card-fadein opacity-0 translate-y-6 transition-all duration-700 ">
                     <div class="border p-2 bg-white rounded-xl sm:rounded-l-sm border-gray-200 hover:shadow-2xl  mt-[-1.5rem] ml-[1rem] sm:mt-2 sm:mb-8 sm:ml-[-2rem] z-10 relative ">
                         <div class="flex flex-col items-center sm:text-left justify-start sm:justify-center  ">
                             <h1 class="text-xl font-bold mb-4 sm:text-left  w-full">{c.titulo}</h1>
